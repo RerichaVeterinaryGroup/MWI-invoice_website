@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Result</title>
+    <link rel="stylesheet" href="result-styles.css">
+</head>
+<body>
+    <div id="result-message"></div>
+    <script>
+        // Get URL parameters
+        const params = new URLSearchParams(window.location.search);
+        const status = params.get('status');
+
+        const resultMessage = document.getElementById('result-message');
+
+        // Display appropriate message based on the status
+        if (status === 'success') {
+            resultMessage.innerHTML = '<div class="success-message">Form Submitted Successfully!</div>';
+        } else if (status === 'error') {
+            resultMessage.innerHTML = '<div class="error-message">Form Submission Failed. Please try again.</div>';
+        }
+    </script>
+</body>
+</html>

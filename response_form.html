@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recreated Form</title>
+    <link rel="stylesheet" href="response-form.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>R Veterinary at The Lake</h1>
+        <h4>Cremation Request</h4>
+        <form id="custom-form" action="/submit" method="post">
+            <div class="form-group">
+                <label for="full_name">Client's Name</label>
+                <input type="text" id="full_name" name="full_name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="patient_name">Patient's Name</label>
+                <input type="text" id="patient_name" name="patient_name" placeholder="Enter your pet's name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="weight">Weight</label>
+                <input type="int" id="weight" name="weight" placeholder="Ex. 1234" required>
+            </div>
+
+            <div class="form-group">
+                <label for="clinic">Customer <br> Select clinic name </label>
+                <select id="clinic" name="clinic">
+                    <option value="Branson">Branson</option>
+                    <option value="Camdenton">Camdenton</option>
+                    <option value="Fenton">Fenton</option>
+                    <option value="Lynn Creek">Lynn Creek</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Additional Comments</label>
+                <textarea id="comments" name="comments" placeholder="Add your comments here" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Preferred Contact Method</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="contact-email" name="contact_method" value="email">
+                    <label for="contact-email">Email</label>
+
+                    <input type="checkbox" id="contact-phone" name="contact_method" value="phone">
+                    <label for="contact-phone">Phone</label>
+
+                    <input type="checkbox" id="contact-message" name="contact_method" value="message">
+                    <label for="contact-message">Message</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="form-script.js"></script>
+</body>
+</html>
